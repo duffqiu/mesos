@@ -16,4 +16,7 @@ RUN wget http://downloads.mesosphere.io/master/centos/7/mesos-0.22.0-py2.7-linux
 
 RUN easy_install --allow-hosts pypi.python.org mesos.egg
 
+RUN rm -rf mesos.egg
+RUN rm -rf setuptools-15.0.zip
+
 ENTRYPOINT [ "/bin/bash", "-c" ]
