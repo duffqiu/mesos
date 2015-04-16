@@ -19,4 +19,6 @@ RUN easy_install --allow-hosts pypi.python.org mesos.egg
 RUN rm -rf mesos.egg
 RUN rm -rf setuptools-15.0.zip
 
+RUN ln -sfn /usr/java/jdk1.7.0_75/jre/lib/amd64/server/libjvm.so /usr/lib/libjvm.so
+
 ENTRYPOINT [ "/bin/bash", "-c" ]
