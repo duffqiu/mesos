@@ -1,7 +1,6 @@
 FROM duffqiu/dockerjdk7:latest
 MAINTAINER duffqiu@gmail.com
 
-RUN yum -y  update
 RUN yum install -y wget
 
 # install mesos from mesosphere
@@ -19,6 +18,6 @@ RUN easy_install --allow-hosts pypi.python.org mesos.egg
 RUN rm -rf mesos.egg
 RUN rm -rf setuptools-15.0.zip
 
-RUN ln -sfn /usr/java/jdk1.7.0_75/jre/lib/amd64/server/libjvm.so /usr/lib/libjvm.so
+RUN ln -sfn /usr/java/jdk1.7.0_79/jre/lib/amd64/server/libjvm.so /usr/lib/libjvm.so
 
 ENTRYPOINT [ "/bin/bash", "-c" ]
